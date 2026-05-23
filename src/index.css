@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Inter", serif;
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+  --color-golf-green: #1b4332;
+  --color-golf-cream: #f5f5f0;
+  --color-golf-gold: #c5a059;
+  --color-deep-navy: #0b132b;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-golf-cream text-deep-navy antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-light tracking-tight;
+  }
+}
+
+.section-padding {
+  @apply py-24 px-8 max-w-6xl mx-auto;
+}
+
+.geometric-border {
+  @apply border border-[rgba(27,67,50,0.15)];
+}
+
+.pga-badge-style {
+  @apply w-20 h-20 border border-white/30 rounded-full flex items-center justify-center text-[10px] text-center leading-tight;
+}
